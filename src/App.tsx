@@ -4,6 +4,7 @@ import { NotFound } from './notfound';
 import { SignIn } from './auth/main/signin';
 import { SignUp } from './auth/main/signup';
 import { ResetPassword } from './auth/main/resetPassword';
+import { ForgotPassword } from './auth/main/forgotPassword';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' element={<SignIn />} />
         <Route path='/register' element={<SignUp />} />
         <Route path='/reset-password' element={<ResetPassword />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );
