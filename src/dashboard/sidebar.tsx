@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
 import { MoonIcon as DarkModeSolid, MoonIcon as DarkModeOutline } from '@heroicons/react/16/solid';
 import { useDarkMode } from '../darkmode';
+import { Navbar } from './navbar';
 
 const tabs = [
     { name: 'Home', icon: aclogo },
@@ -16,7 +17,7 @@ const tabs = [
     { name: 'Calendar', icon: aclogo },
 ];
 
-export const SidebarTest: React.FC = () => {
+export const Sidebar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedTab, setSelectedTab] = useState('Home');
     const { isDarkMode, toggleDarkMode } = useDarkMode()
@@ -118,7 +119,7 @@ export const SidebarTest: React.FC = () => {
                 {/* Content */}
                 <div className={`lg:flex lg:h-screen flex-col border-x-2 h-screen ${isDarkMode ? 'bg-gray-800 text-white border-gray-700' : 'bg-slate-300 text-black border-gray-300'} ${isMenuOpen ? 'hidden lg:block' : ''} w-full max-h-screen`}>
                     <div>
-                        {/* <NavbarTest /> */}
+                        <Navbar />
                     </div>
                     <div className={`mt-10 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-slate-300 text-black'}`}>
                         {tabComponents[selectedTab]}
