@@ -1,0 +1,46 @@
+{
+    "states": [
+      {
+        "name": "State 1",
+        "lgas": [
+          {
+            "name": "LGA 1",
+            "wards": [
+              {
+                "name": "Ward 1",
+                "pollingUnits": ["Polling Unit 1", "Polling Unit 2"]
+              },
+              {
+                "name": "Ward 2",
+                "pollingUnits": ["Polling Unit 3", "Polling Unit 4"]
+              }
+            ]
+          },
+          {
+            "name": "LGA 2",
+            "wards": [
+              {
+                "name": "Ward 3",
+                "pollingUnits": ["Polling Unit 5", "Polling Unit 6"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "State 2",
+        "lgas": [
+          {
+            "name": "LGA 3",
+            "wards": [
+              {
+                "name": "Ward 4",
+                "pollingUnits": ["Polling Unit 7", "Polling Unit 8"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -57,4 +57,6 @@ export const GlobalStateProvider: React.FC<GlobalStateProviderProps> = ({ childr
   );
 };
 
+
+
 export const useGlobalState = () => useContext(GlobalStateContext);
