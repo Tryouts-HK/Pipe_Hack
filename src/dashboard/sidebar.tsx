@@ -1,5 +1,5 @@
-import aclogo from './assets/aclogo.svg'
-import atlogo from './assets/atlogo.svg'
+import aclogo from '../../assets/aclogo.svg'
+import atlogo from '../../assets/atlogo.svg'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
@@ -32,13 +32,13 @@ export const Sidebar: React.FC = () => {
 
     // Map of tab names to their corresponding components
     const tabComponents: { [key: string]: React.ReactNode } = {
-        'Home': <div />,
-        'Create Listing': <div />,
-        'Bookings': <div />,
-        'Wishlists': <div />,
-        'Messages': <div />,
-        'Profile': <div />,
-        'Calendar': <div />,
+        'Home': <div></div>,
+        'Create Listing': <div></div>,
+        'Bookings': <div></div>,
+        'Wishlists': <div></div>,
+        'Messages': <div></div>,
+        'Profile': <div></div>,
+        'Calendar': <div></div>,
     };
     return (
         <div className={`${isDarkMode ? `bg-white` : 'bg-black'}`}>

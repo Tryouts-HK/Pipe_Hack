@@ -6,6 +6,7 @@ import { ResetPassword } from './auth/main/resetPassword';
 import { ForgotPassword } from './auth/main/forgotPassword';
 import { ChangePassword } from './auth/main/changePassword';
 import { Site } from './site/site';
+import { Dashboard } from './dashboard/dashboard';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Site />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path='/login' element={<SignIn />} />
         <Route path='/register' element={<SignUp />} />
         <Route path='/reset-password' element={<ResetPassword />} />
