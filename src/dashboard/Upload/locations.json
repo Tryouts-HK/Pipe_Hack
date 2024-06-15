@@ -1,46 +1,144 @@
 {
     "states": [
       {
-        "name": "State 1",
+        "name": "Lagos",
         "lgas": [
           {
-            "name": "LGA 1",
+            "name": "Ikeja",
             "wards": [
               {
-                "name": "Ward 1",
-                "pollingUnits": ["Polling Unit 1", "Polling Unit 2"]
+                "name": "Alausa",
+                "pollingUnits": ["PU1", "PU2", "PU3"]
               },
               {
-                "name": "Ward 2",
-                "pollingUnits": ["Polling Unit 3", "Polling Unit 4"]
+                "name": "Agidingbi",
+                "pollingUnits": ["PU4", "PU5"]
               }
             ]
           },
           {
-            "name": "LGA 2",
+            "name": "Ojo",
             "wards": [
               {
-                "name": "Ward 3",
-                "pollingUnits": ["Polling Unit 5", "Polling Unit 6"]
+                "name": "Ilogbo",
+                "pollingUnits": ["Chief PU1", "PU2", "PU3"]
+              },
+              {
+                "name": "Shibiri",
+                "pollingUnits": ["Moshalashi PU4", "PU5"]
+              }
+            ]
+          },
+          {
+            "name": "Surulere",
+            "wards": [
+              {
+                "name": "Yaba",
+                "pollingUnits": ["PU6", "PU7", "PU8"]
+              },
+              {
+                "name": "Ojuelegba",
+                "pollingUnits": ["PU9", "PU10"]
               }
             ]
           }
         ]
       },
       {
-        "name": "State 2",
+        "name": "Kano",
         "lgas": [
           {
-            "name": "LGA 3",
+            "name": "Dala",
             "wards": [
               {
-                "name": "Ward 4",
-                "pollingUnits": ["Polling Unit 7", "Polling Unit 8"]
+                "name": "Kofar Mazugal",
+                "pollingUnits": ["PU11", "PU12"]
+              },
+              {
+                "name": "Kano Municipal",
+                "pollingUnits": ["PU13", "PU14", "PU15"]
+              }
+            ]
+          },
+          {
+            "name": "Nasarawa",
+            "wards": [
+              {
+                "name": "Fagge",
+                "pollingUnits": ["PU16", "PU17"]
+              },
+              {
+                "name": "Tudun Wada",
+                "pollingUnits": ["PU18", "PU19", "PU20"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rivers",
+        "lgas": [
+          {
+            "name": "Port Harcourt",
+            "wards": [
+              {
+                "name": "Old GRA",
+                "pollingUnits": ["PU21", "PU22"]
+              },
+              {
+                "name": "New GRA",
+                "pollingUnits": ["PU23", "PU24", "PU25"]
+              }
+            ]
+          },
+          {
+            "name": "Obio/Akpor",
+            "wards": [
+              {
+                "name": "Rumola",
+                "pollingUnits": ["PU26", "PU27"]
+              },
+              {
+                "name": "Rumuomasi",
+                "pollingUnits": ["PU28", "PU29", "PU30"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kaduna",
+        "lgas": [
+          {
+            "name": "Kaduna North",
+            "wards": [
+              {
+                "name": "Kawo",
+                "pollingUnits": ["PU31", "PU32"]
+              },
+              {
+                "name": "Ungwan Sarki",
+                "pollingUnits": ["PU33", "PU34", "PU35"]
+              }
+            ]
+          },
+          {
+            "name": "Kaduna South",
+            "wards": [
+              {
+                "name": "Tudun Wada",
+                "pollingUnits": ["PU36", "PU37"]
+              },
+              {
+                "name": "Barnawa",
+                "pollingUnits": ["PU38", "PU39", "PU40"]
               }
             ]
           }
         ]
       }
-    ]
+    ],
+    "positions": ["President", "Governor", "Senator", "House of Representatives", "State Assembly"],
+    "parties": ["APC", "PDP", "LP", "NNPP", "SDP"]
   }
   

@@ -7,7 +7,7 @@ import { ForgotPassword } from './auth/main/forgotPassword';
 import { ChangePassword } from './auth/main/changePassword';
 import { Site } from './site/site';
 import { Dashboard } from './dashboard/dashboard';
-import { Upload } from './dashboard/Upload/upload';
+import { UploadApp } from './dashboard/Upload/upload';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Site />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard/upload" element={<Upload />} />
+        <Route path="/dashboard/upload" element={<UploadApp />} />
         <Route path='/login' element={<SignIn />} />
         <Route path='/register' element={<SignUp />} />
         <Route path='/reset-password' element={<ResetPassword />} />
