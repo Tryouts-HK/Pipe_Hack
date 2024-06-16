@@ -9,5 +9,14 @@
         "name": "World",
 
         "greeting": "Hello, World!"
-    }
+    },
+
+    "a": [
+        {
+            "salutation": "Hello",
+            "name": "World",
+
+            "greeting": "Hello, World!"
+        }
+    ]
 }
