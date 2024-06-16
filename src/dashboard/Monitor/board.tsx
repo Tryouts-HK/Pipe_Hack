@@ -1,4 +1,4 @@
-export const Monitor = () => {
+export const MonitorBoard = () => {
     return (
         <div>
             
