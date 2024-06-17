@@ -2,10 +2,11 @@ import React from 'react';
 import filterimg from '../../assets/filterimg.svg';
 import { FiSearch } from 'react-icons/fi';
 import { MoonIcon as DarkModeSolid, MoonIcon as DarkModeOutline } from '@heroicons/react/16/solid';
-import { useDarkMode } from '../darkmode';
+// import { useDarkMode } from '../darkmode';
 
 export const Navbar: React.FC = () => {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
+    // const { isDarkMode, toggleDarkMode } = useDarkMode();
+    const isDarkMode = false
     return (
         <div>
             {/* Navbar for Large Screens */}
@@ -26,11 +27,11 @@ export const Navbar: React.FC = () => {
                 </div>
                 <div className="flex gap-x-4">
                     <div>
-                        {isDarkMode ? (
+                        {/* {isDarkMode ? (
                             <DarkModeSolid className='h-7' onClick={toggleDarkMode} />
                         ) : (
                             <DarkModeOutline className='h-7' onClick={toggleDarkMode} />
-                        )}
+                        )} */}
                     </div>
                     <a href="#" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-black'}`}>Link 1</a>
                     <a href="#" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-black'}`}>Link 2</a>

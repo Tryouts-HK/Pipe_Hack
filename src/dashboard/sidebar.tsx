@@ -4,23 +4,32 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
 import { MoonIcon as DarkModeSolid, MoonIcon as DarkModeOutline } from '@heroicons/react/16/solid';
-import { useDarkMode } from '../darkmode';
+// import { useDarkMode } from '../darkmode';
 import { Navbar } from './navbar';
+import { Home } from './Home/home';
+import { Monitor } from './Monitor/monitor';
+import { Groups } from './Groups/groups';
+import { Upload } from './Upload/upload2';
+import { Results } from './Results/results';
+import { Messaging } from './Messages/messaging';
+import { Complaints } from './Complaints/complaints';
 
 const tabs = [
     { name: 'Home', icon: aclogo },
-    { name: 'Create Listing', icon: aclogo },
-    { name: 'Bookings', icon: aclogo },
-    { name: 'Wishlists', icon: aclogo },
+    { name: 'Monitor', icon: aclogo },
+    { name: 'Results', icon: aclogo },
+    { name: 'Upload', icon: aclogo },
+    { name: 'Complaints', icon: aclogo },
     { name: 'Messages', icon: aclogo },
-    { name: 'Profile', icon: aclogo },
-    { name: 'Calendar', icon: aclogo },
+    { name: 'Groups', icon: aclogo },
 ];
 
 export const Sidebar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedTab, setSelectedTab] = useState('Home');
-    const { isDarkMode, toggleDarkMode } = useDarkMode()
+    // const { isDarkMode, toggleDarkMode } = useDarkMode()
+    const isDarkMode = false
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -32,13 +41,13 @@ export const Sidebar: React.FC = () => {
 
     // Map of tab names to their corresponding components
     const tabComponents: { [key: string]: React.ReactNode } = {
-        'Home': <div></div>,
-        'Create Listing': <div></div>,
-        'Bookings': <div></div>,
-        'Wishlists': <div></div>,
-        'Messages': <div></div>,
-        'Profile': <div></div>,
-        'Calendar': <div></div>,
+        'Home': <Home />,
+        'Monitor': <Monitor />,
+        'Results': <Results />,
+        'Upload': <Upload />,
+        'Messages': <Messaging />,
+        'Complaints': <Complaints />,
+        'Groups': <Groups />,
     };
     return (
         <div className={`${isDarkMode ? `bg-white` : 'bg-black'}`}>
@@ -80,14 +89,13 @@ export const Sidebar: React.FC = () => {
                     </div>
                     <div className='flex justify-end'>
                         <div className='lg:hidden mt-3 flex'>
-                            {isDarkMode ? (
+                            {/* {isDarkMode ? (
                                 <DarkModeSolid className='h-7' onClick={toggleDarkMode} />
                             ) : (
                                 <DarkModeOutline className='h-7' onClick={toggleDarkMode} />
-                            )}
+                            )} */}
                         </div>
                     </div>
-                    <div>fdbg</div>
                 </div>
 
                 {/* Sidebar Content (Small Screens) */}
