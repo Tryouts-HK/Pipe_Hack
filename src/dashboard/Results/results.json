@@ -1,0 +1,20 @@
+
+[
+    {
+      "pollingUnit": "PU123",
+      "state": "State1",
+      "lga": "LGA1",
+      "position": "President",
+      "candidate": "Candidate A",
+      "votes": 100
+    },
+    {
+      "pollingUnit": "PU124",
+      "state": "State1",
+      "lga": "LGA2",
+      "position": "President",
+      "candidate": "Candidate B",
+      "votes": 150
+    }
+  ]
+  
