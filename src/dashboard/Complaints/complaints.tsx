@@ -1,4 +1,3 @@
-// src/pages/ComplaintPage.tsx
 import React from 'react';
 
 const pollingUnits = [
