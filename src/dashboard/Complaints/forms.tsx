@@ -1,12 +1,12 @@
-// src/components/ComplaintForm.tsx
 import React, { useState } from 'react';
 import PollingUnitSearch from './search';
 
 interface ComplaintFormProps {
   onSubmit: (data: any) => void;
+  pollingUnits: any[]
 }
 
-export const ComplaintForm: React.FC<ComplaintFormProps> = ({ onSubmit }) => {
+export const ComplaintForm: React.FC<ComplaintFormProps> = ({ onSubmit, pollingUnits }) => {
   const [pollingUnit, setPollingUnit] = useState(null);
   const [text, setText] = useState('');
   const [impactLevel, setImpactLevel] = useState('Low');
@@ -20,6 +20,10 @@ export const ComplaintForm: React.FC<ComplaintFormProps> = ({ onSubmit }) => {
     }
   };
 
+const onSelect = (a: any) => {
+    setPollingUnit(a)
+}
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit({ pollingUnit, text, impactLevel, urgency, video, audio });
@@ -29,7 +33,7 @@ export const ComplaintForm: React.FC<ComplaintFormProps> = ({ onSubmit }) => {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-gray-700">Polling Unit</label>
-        <PollingUnitSearch pollingUnits={pollingUnit} onSelect={setPollingUnit} />
+        <PollingUnitSearch pollingUnits={pollingUnits} onSelect={onSelect} />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Text</label>
