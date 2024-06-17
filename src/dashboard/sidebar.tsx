@@ -3,7 +3,6 @@ import atlogo from '../../assets/atlogo.svg'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
-import { MoonIcon as DarkModeSolid, MoonIcon as DarkModeOutline } from '@heroicons/react/16/solid';
 // import { useDarkMode } from '../darkmode';
 import { Navbar } from './navbar';
 import { Home } from './Home/home';

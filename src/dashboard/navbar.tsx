@@ -1,7 +1,6 @@
 import React from 'react';
 import filterimg from '../../assets/filterimg.svg';
 import { FiSearch } from 'react-icons/fi';
-import { MoonIcon as DarkModeSolid, MoonIcon as DarkModeOutline } from '@heroicons/react/16/solid';
 // import { useDarkMode } from '../darkmode';
 
 export const Navbar: React.FC = () => {
