@@ -73,7 +73,7 @@
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400},];
 
-const renderCustomAxisTick = ({ x, y, payload }) => {
+const renderCustomAxisTick = ({ x, y, pd }) => {
   let path = '';
 
   switch (payload.value) {
