@@ -9,12 +9,29 @@ interface DataPoint {
   amt: number;
 }
 
-// Define the initial data array
 const initialData: DataPoint[] = [
-  { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
-  { name: 'Page B', uv: 300, pv: 2400, amt: 2400 },
-  // Add more data points as needed
-];
+    { name: 'Candidate A', uv: 500, pv: 2400, amt: 2400 },
+    { name: 'Candidate B', uv: 300, pv: 2400, amt: 2400 },
+    { name: 'Candidate C', uv: 700, pv: 2400, amt: 2400 },
+    { name: 'Candidate D', uv: 400, pv: 2400, amt: 2400 },
+    { name: 'Candidate E', uv: 600, pv: 2400, amt: 2400 },
+    { name: 'Candidate F', uv: 200, pv: 2400, amt: 2400 },
+    { name: 'Candidate G', uv: 800, pv: 2400, amt: 2400 },
+    { name: 'Candidate H', uv: 350, pv: 2400, amt: 2400 },
+    { name: 'Candidate I', uv: 450, pv: 2400, amt: 2400 },
+    { name: 'Candidate J', uv: 550, pv: 2400, amt: 2400 },
+    { name: 'Candidate K', uv: 650, pv: 2400, amt: 2400 },
+    { name: 'Candidate L', uv: 750, pv: 2400, amt: 2400 },
+    { name: 'Candidate M', uv: 250, pv: 2400, amt: 2400 },
+    { name: 'Candidate N', uv: 150, pv: 2400, amt: 2400 },
+    { name: 'Candidate O', uv: 950, pv: 2400, amt: 2400 },
+    { name: 'Candidate P', uv: 850, pv: 2400, amt: 2400 },
+    { name: 'Candidate Q', uv: 300, pv: 2400, amt: 2400 },
+    { name: 'Candidate R', uv: 400, pv: 2400, amt: 2400 },
+    { name: 'Candidate S', uv: 500, pv: 2400, amt: 2400 },
+    { name: 'Candidate T', uv: 600, pv: 2400, amt: 2400 }
+  ];
+  
 
 // Define the props for the custom axis tick renderer
 interface CustomAxisTickProps {
