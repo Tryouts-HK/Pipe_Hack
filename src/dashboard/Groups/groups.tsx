@@ -1,5 +1,9 @@
+import GroupsPage from "./page"
+
 export const Groups: React.FC = () => {
     return (
-        <div>Groups</div>
+        <div>
+            <GroupsPage />
+        </div>
     )
 }

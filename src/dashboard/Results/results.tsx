@@ -1,5 +1,9 @@
+import ResultsPage from "./page"
+
 export const Results: React.FC = () => {
     return (
-        <div>Results</div>
+        <div>
+            <ResultsPage />
+        </div>
     )
 }

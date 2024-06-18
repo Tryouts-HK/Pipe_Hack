@@ -1,5 +1,9 @@
+import { Welcome } from "./welcome"
+
 export const Home: React.FC = () => {
     return (
-        <div>Home</div>
+        <div>
+            <Welcome name="dsfsgh"  />
+        </div>
     )
 }
