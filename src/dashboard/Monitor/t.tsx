@@ -93,7 +93,9 @@ const MonitorScreen: React.FC = () => {
       </div>
 
       <LineChart width={600} height={300} data={filteredData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+        <Line type="monotone" dataKey="uv" stroke="green" />
+        <Line type="monotone" dataKey="pv" stroke="blue" />
+        <Line type="monotone" dataKey="amt" stroke="red" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="name" tick={renderCustomAxisTick} />
         <YAxis />

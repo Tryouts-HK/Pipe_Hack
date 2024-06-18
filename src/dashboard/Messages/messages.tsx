@@ -22,13 +22,38 @@ interface Message {
 
 export const Messages: React.FC = () => {
   const [contacts] = useState<Contact[]>([
-    { id: 1, name: 'Ambulance', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 3, time: '10:00 AM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] },
-    { id: 2, name: 'Police Help', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 1, time: '11:00 AM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] },
-    // { id: 3, name: 'Adebayo Salami', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 0, time: '12:00 PM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] },
-    // { id: 4, name: 'Eze Chinedu', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 5, time: '01:00 PM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] },
-    // { id: 5, name: 'Jide Kosoko', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 0, time: '02:00 PM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] },
-    // { id: 6, name: 'Damilare Usman', avatar: avatar, lastMessage: 'Consectetur pulvinar tempor cras...', newMessages: 12, time: '02:00 PM', messages: [{ id: 1, content: 'Message 1', sender: 'received', time: '12:00 am' }, { id: 2, content: 'Message 1', sender: 'sent', time: '12:00 am' }, { id: 3, content: 'Message 3', sender: 'received', time: '12:00 am' }, { id: 4, content: 'Message 4', sender: 'sent', time: '12:00 am' }, { id: 5, content: 'Message 5', sender: 'received', time: '12:00 am' }] }
-  ]);
+    {
+      id: 1,
+      name: 'Ambulance',
+      avatar: avatar,
+      lastMessage: 'Consectetur pulvinar tempor cras...',
+      newMessages: 3,
+      time: '10:00 AM',
+      messages: [
+        { id: 1, content: 'Need an ambulance immediately!', sender: 'received', time: '12:00 am' },
+        { id: 2, content: 'Ambulance is on its way.', sender: 'sent', time: '12:05 am' },
+        { id: 3, content: 'Please hurry, it\'s urgent.', sender: 'received', time: '12:10 am' },
+        { id: 4, content: 'ETA is 5 minutes.', sender: 'sent', time: '12:15 am' },
+        { id: 5, content: 'Thank you!', sender: 'received', time: '12:20 am' }
+      ]
+    },
+    {
+      id: 2,
+      name: 'Police Help',
+      avatar: avatar,
+      lastMessage: 'Consectetur pulvinar tempor cras...',
+      newMessages: 1,
+      time: '11:00 AM',
+      messages: [
+        { id: 1, content: 'There is a suspicious person near my house.', sender: 'received', time: '11:00 pm' },
+        { id: 2, content: 'We are dispatching an officer to your location.', sender: 'sent', time: '11:05 pm' },
+        { id: 3, content: 'Thank you, please hurry.', sender: 'received', time: '11:10 pm' },
+        { id: 4, content: 'The officer will arrive in 10 minutes.', sender: 'sent', time: '11:15 pm' },
+        { id: 5, content: 'Thank you, I feel safer now.', sender: 'received', time: '11:20 pm' }
+      ]
+    }
+  ])
+  
 
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -43,8 +68,14 @@ const isDarkMode = false
   };
 
   const handleSendMessage = () => {
-    if (newMessage.trim()) {
-      setMessages([...messages, { id: messages.length + 1, content: newMessage, sender: 'sent', time: new Date().toLocaleTimeString() }]);
+    if (newMessage.trim() !== '') {
+      const newMsg: Message = {
+        id: messages.length + 1,
+        content: newMessage,
+        sender: 'sent',
+        time: new Date().toLocaleTimeString(),
+      };
+      setMessages([...messages, newMsg]);
       setNewMessage('');
     }
   };
@@ -68,11 +99,11 @@ const isDarkMode = false
         ))}
       </div>
       <div className={`flex items-center border-t p-2 ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-        <input 
-          placeholder='Send New Message...' 
+      <input 
+          placeholder="Send New Message..." 
           type="text" 
           value={newMessage} 
-          onChange={e => setNewMessage(e.target.value)} 
+          onChange={(e) => setNewMessage(e.target.value)} 
           className={`flex-1 p-2 rounded-lg mr-2 ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-white text-gray-900'}`} 
         />
         <button onClick={handleSendMessage} className="p-2 bg-blue-500 text-white rounded-lg">Send</button>
