@@ -1,79 +1,30 @@
-// import React, { useState } from 'react';
-// import { Bar } from 'react-chartjs-2';
-// import { ChartData, ChartOptions } from 'chart.js';
-
-// interface DataPoint {
-//   category: string;
-//   value: number;
-//   color: string;
-// }
-
-// interface MonitorScreenProps {
-//   data: DataPoint[];
-// }
-
-// const MonitorScreen: React.FC<MonitorScreenProps> = ({ data }) => {
-//   const [filter, setFilter] = useState<string>('');
-
-//   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-//     setFilter(e.target.value);
-//   };
-
-//   const filteredData = filter ? data.filter(d => d.category === filter) : data;
-
-//   const chartData: ChartData<'bar'> = {
-//     labels: filteredData.map(d => d.category),
-//     datasets: [
-//       {
-//         label: 'Values',
-//         data: filteredData.map(d => d.value),
-//         backgroundColor: filteredData.map(d => d.color),
-//       },
-//     ],
-//   };
-
-//   const chartOptions: ChartOptions<'bar'> = {
-//     scales: {
-//       y: {
-//         beginAtZero: true,
-//       },
-//     },
-//   };
-
-//   const uniqueCategories = Array.from(new Set(data.map(d => d.category)));
-
-//   return (
-//     <div className="max-w-6xl mx-auto p-4">
-//       <h1 className="text-2xl font-bold mb-4">Monitor Screen</h1>
-
-//       <div className="mb-4">
-//         <label className="block text-sm font-medium text-gray-700">Filter by Category</label>
-//         <select
-//           value={filter}
-//           onChange={handleFilterChange}
-//           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-//         >
-//           <option value="">All Categories</option>
-//           {uniqueCategories.map(category => (
-//             <option key={category} value={category}>
-//               {category}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-
-//       <Bar data={chartData} options={chartOptions} />
-//     </div>
-//   );
-// };
-
-// export default MonitorScreen;
-
-
+import React, { useState, ChangeEvent } from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400},];
 
-const renderCustomAxisTick = ({ x, y, pd }) => {
+// Define the type for a single data point
+interface DataPoint {
+  name: string;
+  uv: number;
+  pv: number;
+  amt: number;
+}
+
+// Define the initial data array
+const initialData: DataPoint[] = [
+  { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
+  { name: 'Page B', uv: 300, pv: 2400, amt: 2400 },
+  // Add more data points as needed
+];
+
+// Define the props for the custom axis tick renderer
+interface CustomAxisTickProps {
+  x: number;
+  y: number;
+  payload: { value: string };
+}
+
+// Custom Axis Tick component
+const renderCustomAxisTick = ({ x, y, payload }: CustomAxisTickProps) => {
   let path = '';
 
   switch (payload.value) {
@@ -93,12 +44,46 @@ const renderCustomAxisTick = ({ x, y, pd }) => {
     </svg>
   );
 };
-export const MonitorScreen = (
-  <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-    <XAxis dataKey="name" tick={renderCustomAxisTick} />
-    <YAxis />
-    <Tooltip />
-  </LineChart>
-);
+
+// MonitorScreen component
+const MonitorScreen: React.FC = () => {
+  const [filter, setFilter] = useState<string>('');
+
+  const handleFilterChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setFilter(e.target.value);
+  };
+
+  const filteredData: DataPoint[] = filter ? initialData.filter(d => d.name === filter) : initialData;
+
+  return (
+    <div className="max-w-6xl mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Monitor Screen</h1>
+
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">Filter by Name</label>
+        <select
+          value={filter}
+          onChange={handleFilterChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        >
+          <option value="">All Names</option>
+          {initialData.map(d => (
+            <option key={d.name} value={d.name}>
+              {d.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <LineChart width={600} height={300} data={filteredData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <XAxis dataKey="name" tick={renderCustomAxisTick} />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
+    </div>
+  );
+};
+
+export default MonitorScreen;
