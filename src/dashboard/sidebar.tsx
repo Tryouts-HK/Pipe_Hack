@@ -147,7 +147,7 @@ import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
 import aclogo from '../../assets/aclogo.svg';
 import atlogo from '../../assets/atlogo.svg';
-import { Navbar } from './navbar';
+
 
 const tabs = [
     { name: 'Home', icon: aclogo, path: '/dashboard' },
