@@ -10,12 +10,14 @@ export const SignIn: React.FC = () => {
   const { setUser } = useUser()
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user');
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate()
 
   const handleSignIn = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
+      setIsLoading(true)
       const url = `${baseUrl}/auth/login`;
       const response = await axios.post(url, { email: email, password: password, role: role }, { withCredentials: true });
       console.log(response)
@@ -69,8 +71,9 @@ export const SignIn: React.FC = () => {
           <button
             type="submit"
             className="w-full py-2 mt-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            disabled={isLoading}
           >
-            Sign In
+             {isLoading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
       </div>

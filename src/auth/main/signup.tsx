@@ -9,6 +9,7 @@ export const SignUp: React.FC = () => {
   const [role, setRole] = useState('user');
   const [error, setError] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate()
 
@@ -19,6 +20,7 @@ export const SignUp: React.FC = () => {
         alert('Passwords do not match');
         return;
       }
+      setIsLoading(true)
       const url = `${baseUrl}/auth/register`;
       const response = await axios.post(url, { email: email, password: password, role: role });
       alert(response.data.message);
@@ -81,8 +83,9 @@ export const SignUp: React.FC = () => {
           <button
             type="submit"
             className="w-full py-2 mt-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            disabled={isLoading}
           >
-            Sign Up
+            {isLoading ? 'Signing Up...' : 'Sign Up'}
           </button>
         </form>
       </div>
