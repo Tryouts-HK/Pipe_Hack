@@ -1,25 +1,44 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import { baseUrl } from '../../config';
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('user');
+  const [error, setError] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSignup = (event: React.FormEvent) => {
+  const navigate = useNavigate()
+
+  const handleSignUp = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
-      alert('Passwords do not match');
-      return;
+    try {
+      if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+      }
+      const url = `${baseUrl}/auth/register`;
+      const response = await axios.post(url, { email: email, password: password, role: role });
+      alert(response.data.message);
+      setRole('')
+      navigate('/login')
+      // Handle signup logic here
+      console.log('Signing in with:', { email, password });
+      setError('');
+    } catch (error) {
+      setError('Sign in failed. Please check your credentials and try again.');
+      console.error('Error signing in:', error);
     }
-    // Handle signup logic here
-    console.log('Signing up with:', { email, password });
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-md rounded-lg">
         <h2 className="text-2xl font-bold text-center">Sign Up</h2>
-        <form onSubmit={handleSignup} className="space-y-4">
+        {error && <p className="text-red-500 text-center">{error}</p>}
+        <form onSubmit={handleSignUp} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email address
@@ -70,4 +89,3 @@ export const SignUp: React.FC = () => {
     </div>
   );
 };
-

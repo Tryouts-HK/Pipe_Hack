@@ -1,4 +1,5 @@
 import React from 'react';
+import { Buttons } from './sign';
 
 const Hero: React.FC = () => {
   return (
@@ -14,6 +15,9 @@ const Hero: React.FC = () => {
         <a href="#about" className="bg-transparent border border-white text-white py-2 px-4 rounded-full hover:bg-white hover:text-blue-800 transition duration-300">
           Learn More
         </a>
+      </div>
+      <div className='mt-12'>
+        <Buttons />
       </div>
     </div>
   );

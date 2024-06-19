@@ -14,6 +14,11 @@ import { Groups } from './dashboard/Groups/groups';
 import { Complaints } from './dashboard/Complaints/complaints';
 import { Results } from './dashboard/Results/results';
 import { Home } from './dashboard/Home/home';
+import { AdminSignIn } from './auth/main/adminsign';
+import { SRVSignIn } from './auth/main/srv';
+import { SRVSignUp } from './auth/main/srvup';
+import { AdminSignUp } from './auth/main/adminup';
+import ProtectedRoute from './protected';
 
 
 function App() {
@@ -36,18 +41,22 @@ function App() {
         <Route path="/" element={<Site />} />
         <Route path="*" element={<NotFound />} />
         <Route path='/login' element={<SignIn />} />
+        <Route path='/login/admin' element={<AdminSignIn />} />
+        <Route path='/login/srv' element={<SRVSignIn />} />
         <Route path='/register' element={<SignUp />} />
+        <Route path='/register/admin' element={<AdminSignUp />} />
+        <Route path='/register/srv' element={<SRVSignUp />} />
         <Route path='/reset-password' element={<ResetPassword />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/change-password' element={<ChangePassword />} />
         <Route path="/dashboard" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="monitor" element={<Monitor />} />
-          <Route path="results" element={<Results />} />
-          <Route path="upload" element={<UploadApp />} />
-          <Route path="messages" element={<Messaging />} />
-          <Route path="complaints" element={<Complaints />} />
-          <Route path="groups" element={<Groups />} />
+          <Route index element={<ProtectedRoute element={<Home />} />} />
+          <Route path="monitor" element={<ProtectedRoute element={<Monitor />} />} />
+            <Route path="results" element={<ProtectedRoute element={<Results />} />} />
+            <Route path="upload" element={<ProtectedRoute element={<UploadApp />} />} />
+            <Route path="messages" element={<ProtectedRoute element={<Messaging />} />} />
+            <Route path="complaints" element={<ProtectedRoute element={<Complaints />} />} />
+            <Route path="groups" element={<ProtectedRoute element={<Groups />} />} />
         </Route>
       </Routes>
     </BrowserRouter>

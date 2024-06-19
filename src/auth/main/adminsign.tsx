@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
-import avatar from '../../../assets/navprofile.png'
 import { baseUrl } from '../../config';
-import { useUser } from '../../user';
 
-export const SignIn: React.FC = () => {
+export const AdminSignIn: React.FC = () => {
   const [email, setEmail] = useState('');
-  const { setUser } = useUser()
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user');
+  const [role, setRole] = useState('admin');
   const [error, setError] = useState('');
-  const navigate = useNavigate()
 
   const handleSignIn = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
       const url = `${baseUrl}/auth/login`;
-      const response = await axios.post(url, { email: email, password: password, role: role }, { withCredentials: true });
-      console.log(response)
-      alert(`Sign In Successful for ${response.data.data.email}`);
-      setUser({ name: response.data.data.email, image: avatar })
+      const response = await axios.post(url, { email: email, password: password, role: role });
+      alert(response.data.message);
       setRole('')
-      navigate('/dashboard')
       // Handle signup logic here
       console.log('Signing in with:', { email, password });
       setError('');
@@ -34,10 +26,8 @@ export const SignIn: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-md rounded-lg">q
-        <h1>Demo Email: asab@gmail.com</h1>
-        <h1>Demo Password: 12345678</h1>
-        <h2 className="text-2xl font-bold text-center">Sign In</h2>
+      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-md rounded-lg">
+        <h2 className="text-2xl font-bold text-center">Sign Up</h2>
         {error && <p className="text-red-500 text-center">{error}</p>}
         <form onSubmit={handleSignIn} className="space-y-4">
           <div>

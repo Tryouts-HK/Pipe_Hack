@@ -1,20 +1,403 @@
-
 [
+  {
+    "pollingUnit": "PU001",
+    "state": "Lagos",
+    "lga": "Ikeja",
+    "position": "President",
+    "candidate": "Candidate A",
+    "votes": 100
+  },
+  {
+    "pollingUnit": "PU002",
+    "state": "Lagos",
+    "lga": "Lagos Island",
+    "position": "Governor",
+    "candidate": "Candidate B",
+    "votes": 150
+  },
+  {
+    "pollingUnit": "PU003",
+    "state": "Abuja",
+    "lga": "Municipal Area Council",
+    "position": "President",
+    "candidate": "Candidate C",
+    "votes": 120
+  },
+  {
+    "pollingUnit": "PU004",
+    "state": "Kano",
+    "lga": "Kano Municipal",
+    "position": "Governor",
+    "candidate": "Candidate D",
+    "votes": 80
+  },
+  {
+    "pollingUnit": "PU005",
+    "state": "Rivers",
+    "lga": "Port Harcourt",
+    "position": "President",
+    "candidate": "Candidate E",
+    "votes": 130
+  },
+  {
+    "pollingUnit": "PU006",
+    "state": "Enugu",
+    "lga": "Enugu North",
+    "position": "Governor",
+    "candidate": "Candidate F",
+    "votes": 110
+  },
+  {
+    "pollingUnit": "PU007",
+    "state": "Oyo",
+    "lga": "Ibadan North",
+    "position": "President",
+    "candidate": "Candidate G",
+    "votes": 90
+  },
+  {
+    "pollingUnit": "PU008",
+    "state": "Delta",
+    "lga": "Warri South",
+    "position": "Governor",
+    "candidate": "Candidate H",
+    "votes": 140
+  },
+  {
+    "pollingUnit": "PU009",
+    "state": "Bauchi",
+    "lga": "Bauchi Municipal",
+    "position": "President",
+    "candidate": "Candidate I",
+    "votes": 95
+  },
+  {
+    "pollingUnit": "PU010",
+    "state": "Anambra",
+    "lga": "Onitsha North",
+    "position": "Governor",
+    "candidate": "Candidate J",
+    "votes": 125
+  },
+  {
+    "pollingUnit": "PU011",
+    "state": "Kaduna",
+    "lga": "Kaduna North",
+    "position": "President",
+    "candidate": "Candidate K",
+    "votes": 105
+  },
+  {
+    "pollingUnit": "PU012",
+    "state": "Ekiti",
+    "lga": "Ado Ekiti",
+    "position": "Governor",
+    "candidate": "Candidate L",
+    "votes": 115
+  },
+  {
+    "pollingUnit": "PU013",
+    "state": "Plateau",
+    "lga": "Jos North",
+    "position": "President",
+    "candidate": "Candidate M",
+    "votes": 85
+  },
+  {
+    "pollingUnit": "PU014",
+    "state": "Ogun",
+    "lga": "Abeokuta North",
+    "position": "Governor",
+    "candidate": "Candidate N",
+    "votes": 135
+  },
+  {
+    "pollingUnit": "PU015",
+    "state": "Katsina",
+    "lga": "Katsina Central",
+    "position": "President",
+    "candidate": "Candidate O",
+    "votes": 70
+  },
+  {
+    "pollingUnit": "PU016",
+    "state": "Cross River",
+    "lga": "Calabar South",
+    "position": "Governor",
+    "candidate": "Candidate P",
+    "votes": 145
+  },
+  {
+    "pollingUnit": "PU017",
+    "state": "Benue",
+    "lga": "Makurdi",
+    "position": "President",
+    "candidate": "Candidate Q",
+    "votes": 100
+  },
+  {
+    "pollingUnit": "PU018",
+    "state": "Niger",
+    "lga": "Minna",
+    "position": "Governor",
+    "candidate": "Candidate R",
+    "votes": 120
+  },
+  {
+    "pollingUnit": "PU019",
+    "state": "Adamawa",
+    "lga": "Yola North",
+    "position": "President",
+    "candidate": "Candidate S",
+    "votes": 95
+  },
+  {
+    "pollingUnit": "PU020",
+    "state": "Imo",
+    "lga": "Owerri Municipal",
+    "position": "Governor",
+    "candidate": "Candidate T",
+    "votes": 110
+  },
+  {
+    "pollingUnit": "PU021",
+    "state": "Sokoto",
+    "lga": "Sokoto South",
+    "position": "President",
+    "candidate": "Candidate U",
+    "votes": 80
+  },
+  {
+    "pollingUnit": "PU022",
+    "state": "Jigawa",
+    "lga": "Dutse",
+    "position": "Governor",
+    "candidate": "Candidate V",
+    "votes": 130
+  },
+  {
+    "pollingUnit": "PU023",
+    "state": "Kogi",
+    "lga": "Lokoja",
+    "position": "President",
+    "candidate": "Candidate W",
+    "votes": 75
+  },
+  {
+    "pollingUnit": "PU024",
+    "state": "Abia",
+    "lga": "Umuahia North",
+    "position": "Governor",
+    "candidate": "Candidate X",
+    "votes": 140
+  },
+  {
+    "pollingUnit": "PU025",
+    "state": "Kwara",
+    "lga": "Ilorin East",
+    "position": "President",
+    "candidate": "Candidate Y",
+    "votes": 65
+  },
+  {
+    "pollingUnit": "PU026",
+    "state": "Taraba",
+    "lga": "Jalingo",
+    "position": "Governor",
+    "candidate": "Candidate Z",
+    "votes": 150
+  },
+  {
+    "pollingUnit": "PU027",
+    "state": "Bayelsa",
+    "lga": "Yenagoa",
+    "position": "President",
+    "candidate": "Candidate AA",
+    "votes": 105
+  },
+  {
+    "pollingUnit": "PU028",
+    "state": "Ebonyi",
+    "lga": "Abakaliki",
+    "position": "Governor",
+    "candidate": "Candidate AB",
+    "votes": 115
+  },
+  {
+    "pollingUnit": "PU029",
+    "state": "Osun",
+    "lga": "Osogbo",
+    "position": "President",
+    "candidate": "Candidate AC",
+    "votes": 90
+  },
+  {
+    "pollingUnit": "PU030",
+    "state": "Zamfara",
+    "lga": "Gusau",
+    "position": "Governor",
+    "candidate": "Candidate AD",
+    "votes": 125
+  },
+  {
+    "pollingUnit": "PU031",
+    "state": "Yobe",
+    "lga": "Damaturu",
+    "position": "President",
+    "candidate": "Candidate AE",
+    "votes": 85
+  },
+  {
+    "pollingUnit": "PU032",
+    "state": "Ekiti",
+    "lga": "Ado Ekiti",
+    "position": "Governor",
+    "candidate": "Candidate AF",
+    "votes": 120
+  },
+  {
+    "pollingUnit": "PU033",
+    "state": "Ondo",
+    "lga": "Akure South",
+    "position": "President",
+    "candidate": "Candidate AG",
+    "votes": 95
+  },
+  {
+    "pollingUnit": "PU034",
+    "state": "Gombe",
+    "lga": "Gombe",
+    "position": "Governor",
+    "candidate": "Candidate AH",
+    "votes": 130
+  },
+  {
+    "pollingUnit": "PU035",
+    "state": "Borno",
+    "lga": "Maiduguri",
+    "position": "President",
+    "candidate": "Candidate AI",
+    "votes": 75
+  },
+  {
+    "pollingUnit": "PU036",
+    "state": "Nasarawa",
+    "lga": "Lafia",
+    "position": "Governor",
+    "candidate": "Candidate AJ",
+    "votes": 140
+  },
+  {
+    "pollingUnit": "PU037",
+    "state": "Kebbi",
+    "lga": "Birnin Kebbi",
+    "position": "Governor",
+    "candidate": "Candidate AJ",
+    "votes": 140
+  },
+  
     {
-      "pollingUnit": "PU123",
-      "state": "State1",
-      "lga": "LGA1",
+      "pollingUnit": "PU038",
+      "state": "Kano",
+      "lga": "Gwale",
+      "position": "Governor",
+      "candidate": "Candidate AL",
+      "votes": 110
+    },
+    {
+      "pollingUnit": "PU039",
+      "state": "Sokoto",
+      "lga": "Sokoto North",
+      "position": "Governor",
+      "candidate": "Candidate AM",
+      "votes": 105
+    },
+    {
+      "pollingUnit": "PU040",
+      "state": "Rivers",
+      "lga": "Obio-Akpor",
       "position": "President",
-      "candidate": "Candidate A",
+      "candidate": "Candidate AN",
+      "votes": 115
+    },
+    {
+      "pollingUnit": "PU041",
+      "state": "Kogi",
+      "lga": "Kabba/Bunu",
+      "position": "Governor",
+      "candidate": "Candidate AO",
+      "votes": 120
+    },
+    {
+      "pollingUnit": "PU042",
+      "state": "Anambra",
+      "lga": "Nnewi North",
+      "position": "President",
+      "candidate": "Candidate AP",
+      "votes": 95
+    },
+    {
+      "pollingUnit": "PU043",
+      "state": "Bauchi",
+      "lga": "Tafawa Balewa",
+      "position": "Governor",
+      "candidate": "Candidate AQ",
+      "votes": 125
+    },
+    {
+      "pollingUnit": "PU044",
+      "state": "Enugu",
+      "lga": "Nsukka",
+      "position": "President",
+      "candidate": "Candidate AR",
       "votes": 100
     },
     {
-      "pollingUnit": "PU124",
-      "state": "State1",
-      "lga": "LGA2",
+      "pollingUnit": "PU045",
+      "state": "Oyo",
+      "lga": "Ibadan South-West",
+      "position": "Governor",
+      "candidate": "Candidate AS",
+      "votes": 130
+    },
+    {
+      "pollingUnit": "PU046",
+      "state": "Delta",
+      "lga": "Ughelli North",
       "position": "President",
-      "candidate": "Candidate B",
-      "votes": 150
-    }
-  ]
-  
+      "candidate": "Candidate AT",
+      "votes": 85
+    },
+    {
+      "pollingUnit": "PU047",
+      "state": "Ekiti",
+      "lga": "Ikere",
+      "position": "Governor",
+      "candidate": "Candidate AU",
+      "votes": 135
+    },
+    {
+      "pollingUnit": "PU048",
+      "state": "Plateau",
+      "lga": "Langtang South",
+      "position": "President",
+      "candidate": "Candidate AV",
+      "votes": 70
+    },
+    {
+      "pollingUnit": "PU049",
+      "state": "Lagos",
+      "lga": "Alimosho",
+      "position": "Governor",
+      "candidate": "Candidate AW",
+      "votes": 140
+    },
+    {
+      "pollingUnit": "PU050",
+      "state": "Abuja",
+      "lga": "Gwagwalada",
+      "position": "President",
+      "candidate": "Candidate AX",
+      "votes": 75
+    }  
+]
