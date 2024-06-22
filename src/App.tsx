@@ -20,8 +20,6 @@ import { SRVSignUp } from './auth/main/srvup';
 import { AdminSignUp } from './auth/main/adminup';
 import ProtectedRoute from './protected';
 import { Settings } from './dashboard/Settings/settings';
-import { Prof } from './dashboard/Settings/prof';
-import { NotificationController } from './dashboard/Settings/notifications';
 
 
 function App() {
