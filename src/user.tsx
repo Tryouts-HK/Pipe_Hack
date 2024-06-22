@@ -8,6 +8,8 @@ interface User {
 interface UserContextType {
   user: User | null;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
+  // token: string | null;
+  // setToken: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -18,11 +20,19 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     return userData ? JSON.parse(userData) : null;
   });
 
+  // const [token, setToken] = useState<string | null>(() => {
+  //   const tokenData = localStorage.getItem('token');
+  //   return tokenData ? JSON.parse(tokenData) : null;
+  // });
+
+
   useEffect(() => {
     if (user) {
       localStorage.setItem('user', JSON.stringify(user));
+      // localStorage.setItem('token', JSON.stringify(token));
     } else {
       localStorage.removeItem('user');
+      // localStorage.removeItem('token');
     }
   }, [user]);
 
@@ -40,4 +50,5 @@ export const useUser = () => {
   }
   return context;
 };
+
 

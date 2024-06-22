@@ -29,15 +29,15 @@
 
    .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(4, 250px);
     grid-gap: 10px;
     justify-content: center;
     margin: 20px;
   }
   
   .grid-item {
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 350px;
     border: 1px solid #ccc;
     padding: 20px;
     box-sizing: border-box;

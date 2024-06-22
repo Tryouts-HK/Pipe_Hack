@@ -23,6 +23,8 @@ export const SignIn: React.FC = () => {
       console.log(response)
       alert(`Sign In Successful for ${response.data.data.email}`);
       setUser({ name: response.data.data.email, image: avatar })
+      // setToken(response.data.accessToken)
+      localStorage.setItem('token', response.data.accessToken)
       setRole('')
       navigate('/dashboard')
       // Handle signup logic here

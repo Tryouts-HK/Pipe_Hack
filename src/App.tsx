@@ -19,6 +19,9 @@ import { SRVSignIn } from './auth/main/srv';
 import { SRVSignUp } from './auth/main/srvup';
 import { AdminSignUp } from './auth/main/adminup';
 import ProtectedRoute from './protected';
+import { Settings } from './dashboard/Settings/settings';
+import { Prof } from './dashboard/Settings/prof';
+import { NotificationController } from './dashboard/Settings/notifications';
 
 
 function App() {
@@ -57,6 +60,14 @@ function App() {
             <Route path="messages" element={<ProtectedRoute element={<Messaging />} />} />
             <Route path="complaints" element={<ProtectedRoute element={<Complaints />} />} />
             <Route path="groups" element={<ProtectedRoute element={<Groups />} />} />
+            <Route path="settings" element={<ProtectedRoute element={<Settings />} />} >
+              {/* <Route path="privacy" element={<ProtectedRoute element={<Prof />} />} /> */}
+              {/* <Route path="security" element={<ProtectedRoute element={<Settings />} />} /> */}
+              {/* <Route path="notifications" element={<ProtectedRoute element={<NotificationController />} />} /> */}
+              {/* <Route path="help" element={<ProtectedRoute element={<Settings />} />} /> */}
+              {/* <Route path="contact" element={<ProtectedRoute element={<Settings />} />} /> */}
+              {/* <Route path="privacy" element={<ProtectedRoute element={<Settings />} />} /> */}
+            </Route>
         </Route>
       </Routes>
     </BrowserRouter>
