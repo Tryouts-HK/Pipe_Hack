@@ -63,7 +63,7 @@ export const SRVSignUp: React.FC = () => {
           </div>
           <div>
             <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700">
-              Confirm Password
+              Confirm Password For SRV
             </label>
             <input
               id="confirm-password"
