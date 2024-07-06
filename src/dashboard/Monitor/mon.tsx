@@ -3,10 +3,10 @@ import './crumbs.css'
 import './mon.css'
 import './pu.css'
 
-import image1 from '../../../assets/results/16943175_img20230226wa0019_jpegb64d8cd3c69cfc6389bf4dff364d2a0d.jpeg'
-import image2 from '../../../assets/results/16943189_img20230226wa0009_jpeg14c606f9b12a0f50127a614318e8f225.jpeg'
-import image3 from '../../../assets/results/Fp1vBAuWwAERyPP.jpeg'
-import image4 from '../../../assets/results/Screenshot 2024-07-05 at 09.58.02.png'
+import image1 from '../../../assets/16943175_img20230226wa0019_jpegb64d8cd3c69cfc6389bf4dff364d2a0d.jpeg'
+import image2 from '../../../assets/16943189_img20230226wa0009_jpeg14c606f9b12a0f50127a614318e8f225.jpeg'
+import image3 from '../../../assets/Fp1vBAuWwAERyPP.jpeg'
+import image4 from '../../../assets/16994621_result2553471677589950thumb_jpeg1a60fb346071af82b7f6e37bbc94a3ad.jpeg'
 
 
 
