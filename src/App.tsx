@@ -12,7 +12,6 @@ import { Monitor } from './dashboard/Monitor/monitor';
 import { Messaging } from './dashboard/Messages/messaging';
 import { Groups } from './dashboard/Groups/groups';
 import { Complaints } from './dashboard/Complaints/complaints';
-import { Results } from './dashboard/Results/results';
 import { Home } from './dashboard/Home/home';
 import { AdminSignIn } from './auth/main/adminsign';
 import { SRVSignIn } from './auth/main/srv';
@@ -20,6 +19,8 @@ import { SRVSignUp } from './auth/main/srvup';
 import { AdminSignUp } from './auth/main/adminup';
 import ProtectedRoute from './protected';
 import { Settings } from './dashboard/Settings/settings';
+import { PollingSearchLayout } from './dashboard/PollingSearch/polling';
+import Results from './dashboard/Results/results';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="messages" element={<ProtectedRoute element={<Messaging />} />} />
             <Route path="complaints" element={<ProtectedRoute element={<Complaints />} />} />
             <Route path="groups" element={<ProtectedRoute element={<Groups />} />} />
+            <Route path='search-ai' element={<ProtectedRoute element={<PollingSearchLayout />} />} />
             <Route path="settings" element={<ProtectedRoute element={<Settings />} />} >
               {/* <Route path="privacy" element={<ProtectedRoute element={<Prof />} />} /> */}
               {/* <Route path="security" element={<ProtectedRoute element={<Settings />} />} /> */}

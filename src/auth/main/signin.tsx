@@ -19,6 +19,8 @@ export const SignIn: React.FC = () => {
     try {
       setIsLoading(true)
       const url = `${baseUrl}/auth/login`;
+      // localStorage.setItem('token', "khjjjkjjnnnn")
+      // setUser({ name: "Jesus", image: avatar })
       const response = await axios.post(url, { email: email, password: password, role: role }, { withCredentials: true });
       console.log(response)
       alert(`Sign In Successful for ${response.data.data.email}`);
@@ -30,10 +32,27 @@ export const SignIn: React.FC = () => {
       // Handle signup logic here
       console.log('Signing in with:', { email, password });
       setError('');
-    } catch (error) {
-      setError('Sign in failed. Please check your credentials and try again.');
+    } catch (error: any) {
       console.error('Error signing in:', error);
+    if (axios.isAxiosError(error)) {
+      console.log('Axios error:', error.message);
+      if (error.response) {
+        // Server responded with a status other than 200 range
+        console.log('Response data:', error.response.data);
+        console.log('Response status:', error.response.status);
+        console.log('Response headers:', error.response.headers);
+        setError(error.response.data.message);
+      } else if (error.request) {
+        // Request was made but no response was received
+        console.log('Request data:', error.request);
+      } else {
+        // Something happened in setting up the request that triggered an error
+        console.log('Error message:', error.message);
+      }
+    } else {
+      console.log('General error:', error.message);
     }
+  }
   };
 
   return (

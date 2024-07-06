@@ -1,6 +1,6 @@
 // Profile.tsx
 import React, { useState } from 'react';
-import { useUser } from '../../user';
+import { useUser } from '../user';
 import { useNavigate } from 'react-router-dom';
 
 export const DashProfile: React.FC = () => {
@@ -19,6 +19,10 @@ export const DashProfile: React.FC = () => {
   };
 
   return (
+    <div className='flex justify-between'>
+      <div>
+        
+      </div>
     <div className="relative">
       <div
         className="flex items-center cursor-pointer"
@@ -43,6 +47,7 @@ export const DashProfile: React.FC = () => {
           </button>
         </div>
       )}
+    </div>
     </div>
   );
 };

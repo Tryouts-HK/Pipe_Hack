@@ -1,12 +1,10 @@
-import { MessageHeader } from "./header"
-import { Messages } from "./messages"
+import { Mes } from "./mes/mes"
 
 export const Messaging: React.FC = () => {
     return (
         <div>
-            <MessageHeader />
             <div>
-                <Messages />
+                <Mes />
             </div>
         </div>
     )

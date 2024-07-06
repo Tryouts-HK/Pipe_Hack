@@ -1,12 +1,12 @@
-import React from 'react';
-import MonitorScreen from './t';
+// import React from 'react';
+// import MonitorScreen from './t';
 
-export const Screen: React.FC = () => {
-  return (
-    <div>
-      <MonitorScreen  />
-    </div>
-  );
-};
+// export const Screen: React.FC = () => {
+//   return (
+//     <div>
+//       <MonitorScreen  />
+//     </div>
+//   );
+// };
 
 

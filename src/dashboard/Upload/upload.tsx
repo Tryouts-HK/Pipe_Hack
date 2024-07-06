@@ -142,14 +142,18 @@
 
 
 import React from 'react';
-import { Upload } from './upload2';
+// import { Upload } from './upload2';
 import { GlobalStateProvider } from '../../globalstate2';
+import { Up } from './up';
 
 export const UploadApp: React.FC = () => {
   return (
     <GlobalStateProvider>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      {/* <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <Upload />
+      </div> */}
+      <div>
+        <Up />
       </div>
     </GlobalStateProvider>
   );

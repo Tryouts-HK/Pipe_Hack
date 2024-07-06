@@ -1,0 +1,22 @@
+.breadcrumbs {
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb-button {
+    font-size: 14px;
+    color: grey; /* Default color for inactive breadcrumbs */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .breadcrumb-button.active {
+    color: black; /* Active breadcrumb color */
+    font-weight: bold;
+  }
+  
+  .breadcrumb-separator {
+    color: grey; /* Separator color */
+    margin: 0 5px;
+  }
+  

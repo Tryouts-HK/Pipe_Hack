@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/16/solid';
 import aclogo from '../../assets/aclogo.svg';
 import atlogo from '../../assets/atlogo.svg';
+import logo from '../../assets/electlogo.png';
 
 
 const tabs = [
     { name: 'Home', icon: aclogo, path: '/dashboard' },
+    { name: 'Search AI', icon: aclogo, path: '/dashboard/search-ai' },
     { name: 'Monitor', icon: aclogo, path: '/dashboard/monitor' },
     { name: 'Results', icon: aclogo, path: '/dashboard/results' },
     { name: 'Upload', icon: aclogo, path: '/dashboard/upload' },
@@ -33,18 +35,22 @@ export const Sidebar: React.FC = () => {
             </div> */}
             <div className={`${isDarkMode ? 'bg-white' : 'bg-black'}`}>
 
-                <div className={`flex flex-col lg:flex-row ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+                <div className={`flex border border-x-black flex-col lg:flex-row ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
                     {/* Sidebar (Large Screens) */}
                     <div className={`hidden lg:block w-80 p-4 h-screen overflow-y-auto ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
-                        <div className='flex justify-between'>
-                            <Link to={'/dashboard'}><h1 className='text-6xl font-bold text-blue-600 mb-16'>Pi-Node</h1></Link>
+                        <div className='flex justify-between -mt-24 -mb-24'>
+                            <Link to={'/dashboard'}>
+                                <img src={logo} width={300} height={300} alt="AC Logo" />
+                                {/* <h1 className='text-6xl font-bold text-black ml-5 mb-16'>ElectTra</h1>
+                                 */}
+                            </Link>
                         </div>
                         <ul className='-mt-10'>
                             {tabs.map((tab, index) => (
-                                <div key={index} className={`font-bold hover:bg-blue-200 hover:text-blue-600 px-8 py-4 cursor-pointer rounded-xl ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
-                                    <li className={location.pathname === tab.path ? 'flex items-center gap-x-4 text-blue-500 cursor-pointer' : 'flex items-center cursor-pointer gap-x-4'}>
+                                <div key={index} className={`font-bold hover:bg-blue-200 hover:text-black px-8 py-4 cursor-pointer rounded-xl ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
+                                    <li className={location.pathname === tab.path ? 'flex items-center gap-x-4 text-black cursor-pointer' : 'flex items-center cursor-pointer gap-x-4'}>
                                         <Link to={tab.path} className="flex items-center">
-                                            {tab.icon && <img src={tab.icon} alt={tab.name} className="h-6 w-6 mr-2" />}
+                                            {/* {tab.icon && <img src={tab.icon} alt={tab.name} className="h-6 w-6 mr-2" />} */}
                                             <div className="flex flex-col">
                                                 <span className='hover:text-blue-600'>{tab.name}</span>
                                             </div>
